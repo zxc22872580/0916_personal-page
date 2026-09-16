@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chen Caojun | Personal Portfolio</title>
+    <meta name="description"
+        content="Personal website of Chen Caojun - Senior Full-Stack Architect & AI Specialist featuring live system clock, technical skills, and project portfolio.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Particles Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand">
+                <span class="brand-text">Chen<span class="accent-dot">.</span>Caojun</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Mini Live Time Badge in Header -->
+                <div class="mini-clock" id="mini-clock">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="mini-time-text">00:00:00</span>
+                </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section hero-centered">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-status">
+                        <span class="status-pulse"></span>
+                        <span>Available for AI & Full-Stack Projects</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hello, I'm <br>
+                        <span class="gradient-text">Chen Caojun</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Senior Full-Stack Architect & AI Engineering Specialist. Building scalable systems, intelligent
+                        agents, and high-performance web applications.
+                    </p>
+
+                    <!-- Real-Time Dynamic Clock Widget -->
+                    <div class="time-card">
+                        <div class="time-card-header">
+                            <div class="live-indicator">
+                                <span class="dot-live"></span>
+                                <span class="live-text">CURRENT SYSTEM TIME (LIVE)</span>
+                            </div>
+                            <span class="tz-badge" id="tz-badge">UTC+08:00 (Asia/Shanghai)</span>
+                        </div>
+                        <div class="time-display">
+                            <div class="time-digits" id="hero-time">10:19:23</div>
+                            <div class="time-ampm" id="hero-ampm">AM</div>
+                        </div>
+                        <div class="date-display" id="hero-date">
+                            Wednesday, September 16, 2026
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-code"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-regular fa-paper-plane"></i> Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About <span class="gradient-text">Chen Caojun</span></h2>
+                    <p class="section-subtitle">Architecting solutions at the intersection of modern web standards and
+                        artificial intelligence</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="about-icon"><i class="fa-solid fa-terminal"></i></div>
+                        <h3>Technical Philosophy</h3>
+                        <p>I believe in pragmatic software engineering: clean architecture, robust typing, zero bloat,
+                            and delightful user experiences powered by modern AI primitives.</p>
+                    </div>
+
+                    <div class="about-card glass-card">
+                        <div class="about-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>AI & Systems</h3>
+                        <p>Specialized in LLM agent orchestration, RAG pipelines, high-concurrency microservices,
+                            dynamic UI engineering, and real-time streaming architectures.</p>
+                    </div>
+
+                    <div class="about-card glass-card">
+                        <div class="about-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Engineering Excellence</h3>
+                        <p>Dedicated to writing self-documenting code, enforcing rigorous testing, and delivering
+                            production-ready platforms engineered to scale seamlessly.</p>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">45+</span>
+                        <span class="stat-label">Completed Projects</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">99.99%</span>
+                        <span class="stat-label">System Uptime</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Lines of Clean Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                    <p class="section-subtitle">A comprehensive breakdown of tools, frameworks, and domain expertise</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category glass-card">
+                        <h3><i class="fa-brands fa-js"></i> Frontend Engineering</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">React / Next.js</span>
+                            <span class="skill-tag">Vue.js / Nuxt</span>
+                            <span class="skill-tag">Vanilla JS (ESNext)</span>
+                            <span class="skill-tag">HTML5 / CSS3 / SCSS</span>
+                            <span class="skill-tag">TailwindCSS / Canvas</span>
+                            <span class="skill-tag">WebSockets / WebRTC</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3><i class="fa-solid fa-server"></i> Backend & Distributed</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Node.js / Express</span>
+                            <span class="skill-tag">Python (FastAPI / Django)</span>
+                            <span class="skill-tag">Go (Golang)</span>
+                            <span class="skill-tag">GraphQL & REST APIs</span>
+                            <span class="skill-tag">PostgreSQL / MySQL</span>
+                            <span class="skill-tag">Redis & Memcached</span>
+                            <span class="skill-tag">Kafka / RabbitMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3><i class="fa-solid fa-robot"></i> AI & Machine Learning</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">LLM Orchestration</span>
+                            <span class="skill-tag">LangChain / LlamaIndex</span>
+                            <span class="skill-tag">Vector DBs (Qdrant/Milvus)</span>
+                            <span class="skill-tag">PyTorch / HuggingFace</span>
+                            <span class="skill-tag">RAG System Design</span>
+                            <span class="skill-tag">Agentic Tool Calling</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3><i class="fa-solid fa-cloud"></i> DevOps & Infrastructure</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Docker / Kubernetes</span>
+                            <span class="skill-tag">AWS / GCP / Cloudflare</span>
+                            <span class="skill-tag">CI/CD Pipelines</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">Nginx / Load Balancing</span>
+                            <span class="skill-tag">Prometheus & Grafana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">Selected engineering implementations and open-source contributions</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-badge">AI Agent Engine</div>
+                        <h3 class="project-title">Nexus Agent Orchestrator</h3>
+                        <p class="project-desc">Autonomous multi-agent task execution runtime built with Node.js &
+                            Python, supporting real-time streaming, dynamic tool synthesis, and fault-tolerant state
+                            recovery.</p>
+                        <div class="project-tech">
+                            <span>TypeScript</span>
+                            <span>Python</span>
+                            <span>VectorDB</span>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Demo project link clicked!');"><i
+                                    class="fa-brands fa-github"></i> Repository</a>
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Live demo preview active!');"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-badge">High Concurrency</div>
+                        <h3 class="project-title">HyperPulse Stream Bus</h3>
+                        <p class="project-desc">Sub-millisecond event streaming gateway capable of handling 500k+
+                            concurrent WebSocket connections with automated load partitioning and Redis cluster backing.
+                        </p>
+                        <div class="project-tech">
+                            <span>Go</span>
+                            <span>Redis Cluster</span>
+                            <span>Docker</span>
+                            <span>gRPC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Demo repository link!');"><i
+                                    class="fa-brands fa-github"></i> Repository</a>
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Live benchmarks active!');"><i
+                                    class="fa-solid fa-chart-line"></i> Benchmarks</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-badge">Developer Tools</div>
+                        <h3 class="project-title">Chronos Real-Time Monitor</h3>
+                        <p class="project-desc">Visual latency & metrics monitor for distributed APIs featuring
+                            zero-dependency client hooks, interactive WebGL charts, and instantaneous alert routing.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Canvas API</span>
+                            <span>WebAssembly</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Demo project repository!');"><i
+                                    class="fa-brands fa-github"></i> Repository</a>
+                            <a href="#" class="project-link"
+                                onclick="event.preventDefault(); alert('Live app preview!');"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="section-subtitle">Have a project in mind or want to collaborate with Chen Caojun?</p>
+                </div>
+
+                <div class="contact-wrapper glass-card">
+                    <div class="contact-info">
+                        <h3>Let's build something remarkable.</h3>
+                        <p>Feel free to reach out for consulting, architectural reviews, or full-stack AI engineering
+                            collaborations.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <span class="label">Email</span>
+                                    <a href="mailto:chen.caojun@example.com">chen.caojun@example.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <span class="label">Location</span>
+                                    <span>Shanghai, China (UTC+8)</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-regular fa-clock"></i>
+                                <div>
+                                    <span class="label">Local Time</span>
+                                    <span id="contact-time-badge">2026-09-16 10:19:23 (Asia/Shanghai)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="mailto:chen.caojun@example.com" aria-label="Email"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g. Sarah Lin">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required placeholder="e.g. sarah@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" required
+                                placeholder="Tell Chen about your project or inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 <strong>Chen Caojun</strong> (陈曹军). All rights reserved.</p>
+            <p class="footer-time">Current System Time: <span id="footer-time">2026-09-16 10:19:23</span></p>
+            <a href="#hero" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
