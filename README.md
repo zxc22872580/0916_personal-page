@@ -7,6 +7,8 @@ Personal portfolio and interactive web page for **Chen Caojun** (陈曹军), fea
 Check out the live interactive website here:  
 👉 **[https://zxc22872580.github.io/0916_personal-page/](https://zxc22872580.github.io/0916_personal-page/)**
 
+![Demo Preview](demo.png)
+
 ---
 
 ## ✨ Key Features
@@ -22,6 +24,7 @@ Check out the live interactive website here:
 
 ```
 .
+├── demo.png     # Live demo preview screenshot
 ├── index.html   # Main HTML5 structure
 ├── style.css    # CSS design system & theme variables
 └── script.js    # Live clock, theme switcher, & particle canvas logic
